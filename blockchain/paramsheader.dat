@@ -1,0 +1,36 @@
+# ==== MultiChain configuration file ====
+
+# Created by multichain-util 
+# Protocol version: 10008 
+
+# This parameter set is VALID. 
+# To join network please run "multichaind tangoawards2017".
+
+# The following parameters can only be edited if this file is a prototype of another configuration file. 
+# Please run "multichain-util clone tangoawards2017 <new-network-name>" to generate new network. 
+
+
+# Basic chain parameters
+
+chain-protocol = multichain             # Chain protocol: multichain (permissions, native assets) or bitcoin
+chain-description = Tango Awards July 2017 - Chuck Knowledge Loves You! # Chain description, embedded in genesis block coinbase, max 256 chars.
+root-stream-name = vote                 # Root stream name, blank means no root stream.
+root-stream-open = true                 # Allow anyone to publish in root stream
+chain-is-testnet = false                # Content of the 'testnet' field of API responses, for compatibility.
+target-block-time = 15                  # Target time between blocks (transaction confirmation delay), seconds. (2 - 86400)
+maximum-block-size = 8388608            # Maximum block size in bytes. (1000 - 1000000000)
+
+# Global permissions
+
+anyone-can-connect = true               # Anyone can connect, i.e. a publicly readable blockchain.
+anyone-can-send = true                 # Anyone can send, i.e. transaction signing not restricted by address.
+anyone-can-receive = false              # Anyone can receive, i.e. transaction outputs not restricted by address.
+anyone-can-receive-empty = true         # Anyone can receive empty output, i.e. without permission grants, asset transfers and zero native currency.
+anyone-can-create = false               # Anyone can create new streams.
+anyone-can-issue = false                # Anyone can issue new native assets.
+anyone-can-mine = false                 # Anyone can mine blocks (confirm transactions).
+anyone-can-activate = false             # Anyone can grant or revoke connect, send and receive permissions.
+anyone-can-admin = false                # Anyone can grant or revoke all permissions.
+support-miner-precheck = true           # Require special metadata output with cached scriptPubKey for input, to support advanced miner checks.
+allow-p2sh-outputs = true               # Allow pay-to-scripthash (P2SH) scripts, often used for multisig.
+allow-multisig-outputs = true           # Allow bare multisignature scripts, rarely used but still supported.
